@@ -11,7 +11,8 @@ export default function Email() {
       <div className="email">
         <Sidebar />
         <main>
-          <Route exact path="" render ={<EmailList folderId="inbox" }
+          <Route exact path="/inbox" render ={ (props) => < EmailList {...props}  folderId="inbox"  /> } />
+          <Route exact path="/spam" render ={ (props) => < EmailList {...props}  folderId="spam"  /> } />
           {/* <SingleEmail folderId="inbox" emailId="1" /> */}
         </main>
       </div>
