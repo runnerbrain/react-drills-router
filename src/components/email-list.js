@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import './email-list.css';
-import { Link } from 'react-router-d'
+import { Link } from 'react-router-dom';
 
 export function EmailList(props) {
     const emails = props.emailList.map(email =>
@@ -10,7 +10,7 @@ export function EmailList(props) {
                 {email.from}
             </div>
             <div className="email-list-email-title">
-                <
+                <Link to={`${email.id}`}>{email.title}</Link>
             </div>
         </li>
     );
