@@ -19,6 +19,7 @@ export default function Email() {
           <Switch>
             <Redirect exact from="/" to="/inbox" />
             <Route exact path="/:folderId" component={EmailList} />
+            
           </Switch>
           {/*<Route exact path="/inbox" render ={ (props) => <EmailList {...props}  folderId="inbox"  /> } />
           <Route exact path="/spam" render ={ (props) => <EmailList {...props}  folderId="spam"  /> } />
