@@ -29,6 +29,7 @@ const mapStateToProps = (state, props) => {
     const folderId = props.match.params.folderId;
     const folder = state[folderId];
     return {
+        folderId: folderId,
         folderName: folder.name,
         emailList: Object.keys(folder.emails).map(emailId =>
             folder.emails[emailId]
