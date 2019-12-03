@@ -10,7 +10,7 @@ export function EmailList(props) {
                 {email.from}
             </div>
             <div className="email-list-email-title">
-                <Link to={`${props.folderName}/${email.id}`}>{email.title}</Link>
+                <Link to={`/${props.folderId}/${email.id}`}>{email.title}</Link>
             </div>
         </li>
     );
